@@ -1,0 +1,13 @@
+<template name="more-template">
+  <view class="choice_hot">
+    <view class='hot_head'>
+      <text class='slogan'>{{title}}</text>
+      <view class='more' wx:if="{{moreShow}}">
+        <view catchtap='onMoreTap'>
+          <text class='more-text'>更多</text>
+          <image class='more-img' src='/images/icons/arrow-right.png' />
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -14,6 +14,42 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+function get_http(url, callback) {
+  wx.request({
+    url: url,
+    method: "GET",
+    data: {},
+    header: {
+      "Content-Type": "json"
+    },
+    success: function(res) {
+      callback(res.data);
+    },
+    fail: function(err) {
+      console.log("error" + err);
+    }
+  })
+}
+
+function post_http(url, data, callback) {
+  wx.request({
+    url: url,
+    method: "POST",
+    data: data,
+    header: {
+      "Content-Type": "json"
+    },
+    success: function(res) {
+      callback(res.data);
+    },
+    fail: function(err) {
+      console.log("error" + err);
+    }
+  })
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getHttp: get_http,
+  postHttp: post_http,
 }

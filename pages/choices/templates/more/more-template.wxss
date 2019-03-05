@@ -1,0 +1,26 @@
+.hot_head {
+  margin: 0 auto 20rpx;
+  padding: 30rpx 20rpx 22rpx;
+}
+
+.slogan {
+  font-size: 26rpx;
+  padding-left:10rpx; 
+  border-left: 5rpx solid #40e0d0;
+}
+
+.more {
+  float: right;
+}
+
+.more-text {
+  vertical-align: middle;
+  margin-right: 10rpx;
+  color:#aaa;
+}
+
+.more-img {
+  width: 9rpx;
+  height: 16rpx;
+  vertical-align: middle;
+}

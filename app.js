@@ -1,6 +1,13 @@
 //app.js
 App({
-  onLaunch: function () {
+  globalData: {
+    userInfo: null,
+    doubanBase: "https://douban.uieee.com", // 豆瓣URL
+  },
+  onLaunch: function() {
+    // 清除真机中的缓存数据
+    // wx.clearStorage();
+    // wx.clearStorageSync();
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -32,8 +39,8 @@ App({
         }
       }
     })
-  },
-  globalData: {
-    userInfo: null
   }
+  // globalData: {
+  //   userInfo: null
+  // }
 })
