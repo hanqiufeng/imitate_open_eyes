@@ -1,1 +1,32 @@
-<text>分类</text>
+<view>
+  <scroll-view scroll-x>
+    <view class='tag-container'>
+      <view class='tag-item' wx:for="{{tags}}" wx:key>
+        <text class='tag-item-text'>{{item.tagName}}</text>
+      </view>
+      <button id="slide" bindtap="toggle">▼</button>
+    </view>
+  </scroll-view>
+  
+  <view id="box" class="{{first_click?'show':'hide'}} {{state?'open':'close'}}">
+    <view id="item_list">
+      <!-- <view wx:for="{{tags}}" wx:key>
+      <text>{{item.tagName}}</text>
+    </view> -->
+
+      <view class="weui-grids">
+        <view class="weui-grid" wx:for="{{routers}}" wx:key="name">
+          <!-- <navigator url="{{item.url+'?name='+item.name+'&code='+item.code}}"> -->
+          <navigator url="{{item.url}}">
+            <view class='weui-grid__bg'>
+              <view class="weui-grid__icon">
+                <image src=" {{item.icon}}" mode="scaleToFill" />
+              </view>
+              <text class="weui-grid__label">{{item.name}}</text>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

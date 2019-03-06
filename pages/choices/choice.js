@@ -1,4 +1,5 @@
 var util = require('../../utils/util.js');
+var mockData = require("../../mockData/choice_data.js");
 const app = getApp();
 const order = ['red', 'yellow', 'blue', 'green', 'red']
 
@@ -10,7 +11,6 @@ Page({
         '../../images/comic_1.jpg',
         '../../images/comic_2.jpg',
       ],
-      // 'http://old.bz55.com/uploads/allimg/160621/139-160621091520.jpg',
       indicatorDots: true,
       indicatorActiveColor: "#40e0d0",
       autoplay: true,
@@ -18,36 +18,37 @@ Page({
       interval: 3000,
       duration: 1000
     },
-    logos: [{
-      img: "../../images/icons/liaotian.png",
-      title: "聊天背景",
-      id: 0,
-    }, {
-      img: "../../images/icons/qiatongtouxiang.png",
-      title: "头像",
-      id: 1,
-    }, {
-      img: "../../images/icons/biaoqing.png",
-      title: "表情",
-      id: 2,
-    }, {
-      img: "../../images/icons/xingzuo.png",
-      title: "星座",
-      id: 3,
-    }],
-    toView: 'red',
-    scrollTop: 100,
-
+    logos: mockData.logos,
+    dynamic_item_data: mockData.dynamic_item_data,
+    list_data: {
+      openPicker: false,
+      needAnimation: false,
+      contentHeight: 0
+    }
   },
 
   onLoad: function(options) {
-    var doubanUrl = app.globalData.doubanBase + "/v2/movie/top250";
+    // var doubanUrl = app.globalData.doubanBase + "/v2/movie/top250";
     // util.getHttp(doubanUrl, this.procssJingXuan);
+    // console.log(this.data.dynamic_item_data);
+    var dynamic_item_data = this.data.dynamic_item_data;
+    var d_text = "";
+    for (var i in dynamic_item_data) {
+      // console.log(dynamic_item_data[i].text);
+      d_text = dynamic_item_data[i].text;
+      if (d_text.length > 18) {
+        d_text = d_text.substring(0, 18) + "···";
+        dynamic_item_data[i].text = d_text;
+      }
+    }
+    this.setData({
+      dynamic_item_data: dynamic_item_data
+    })
   },
 
-  procssJingXuan: function(data) {
-    console.log(data);
-  },
+  // procssJingXuan: function(data) {
+  //   console.log(data);
+  // },
 
   onLogoTap: function(event) {
     var logoId = event.currentTarget.dataset.id;
@@ -70,38 +71,27 @@ Page({
     console.log("您点击了更多");
   },
 
-  upper(e) {
-    console.log(e)
-  },
-
-  lower(e) {
-    console.log(e)
-  },
-  scroll(e) {
-    console.log(e)
-  },
-  tap(e) {
-    for (let i = 0; i < order.length; ++i) {
-      if (order[i] === this.data.toView) {
-        this.setData({
-          toView: order[i + 1]
-        })
-        break
-      }
-    }
-  },
-  tapMove(e) {
-    this.setData({
-      scrollTop: this.data.scrollTop + 10
-    })
-  },
-
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
+    var that = this;
+    wx.getSystemInfo({
+      success: function(res) {
+        that.setData({
+          //动态根据手机分辨率来计算内容的高度（屏幕总高度-顶部筛选栏的高度）
+          contentHeight: (res.windowHeight - 72 * res.screenWidth / 750)
+        });
+      }
+    })
+  },
 
+  onPickHeaderClick: function() {
+    this.setData({
+      openPicker: !this.data.openPicker,
+      needAnimation: true
+    })
   },
 
   /**
