@@ -1,6 +1,7 @@
 <import src="../templates/swiper/swiper-template.wxml" />
 <import src="../templates/more/more-template.wxml" />
 <import src="../templates/list/list-template.wxml" />
+<import src="../templates/tab/tab-template.wxml" />
 
 <view class='choice_container'>
   <template is="swiper-template" data="{{...swipers}}" />
@@ -51,7 +52,7 @@
   </view>
 
   <view>
-    <!-- <template is="list-template" data="{{...list_data}}" /> -->
+    <template is="tab-template" data="{{...tab_data}}" />
   </view>
 
 </view>

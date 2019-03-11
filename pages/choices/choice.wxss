@@ -2,6 +2,7 @@
 @import "../templates/swiper/swiper-template.wxss";
 @import "../templates/more/more-template.wxss";
 @import "../templates/list/list-template.wxss";
+@import "../templates/tab/tab-template.wxss";
 
 .choice_container {
   display: flex;

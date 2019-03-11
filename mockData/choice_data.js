@@ -84,7 +84,173 @@ var dynamic_item_data = [{
   }],
 }]
 
+var tab_data = {
+  currentTab: 0, //预设当前项的值
+  scrollLeft: 0, //tab标题的滚动条位置
+  listData: [
+    {
+      name: "健康",
+      expertList: [{
+        img: "avatar.png",
+        name: "欢顔0",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      }, {
+        img: "avatar.png",
+        name: "欢顔0",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+        }, {
+          img: "avatar.png",
+          name: "欢顔0",
+          tag: "知名情感博主",
+          answer: 134,
+          listen: 2234
+        }, {
+          img: "avatar.png",
+          name: "欢顔0",
+          tag: "知名情感博主",
+          answer: 134,
+          listen: 2234
+        }, {
+          img: "avatar.png",
+          name: "欢顔0",
+          tag: "知名情感博主",
+          answer: 134,
+          listen: 2234
+        }, {
+          img: "avatar.png",
+          name: "欢顔0",
+          tag: "知名情感博主",
+          answer: 134,
+          listen: 2234
+        }, {
+          img: "avatar.png",
+          name: "欢顔0",
+          tag: "知名情感博主",
+          answer: 134,
+          listen: 2234
+        }, {
+          img: "avatar.png",
+          name: "欢顔0",
+          tag: "知名情感博主",
+          answer: 134,
+          listen: 2234
+        }]
+    }, {
+      name: "情感",
+      expertList: [{
+        img: "avatar.png",
+        name: "欢顔1",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      }, {
+        img: "avatar.png",
+        name: "欢顔1",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      }]
+    }, {
+      name: "职场",
+      expertList: [{
+        img: "avatar.png",
+        name: "欢顔2",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      }, {
+        img: "avatar.png",
+        name: "欢顔2",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      }]
+    }, {
+      name: "育儿",
+      expertList: [{
+        img: "avatar.png",
+        name: "欢顔3",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      }, {
+        img: "avatar.png",
+        name: "欢顔3",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      }]
+    }, {
+      name: "纠纷",
+      expertList: [{
+        img: "avatar.png",
+        name: "欢顔4",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      }, {
+        img: "avatar.png",
+        name: "欢顔4",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      }]
+    }, {
+      name: "青葱",
+      expertList: [{
+        img: "avatar.png",
+        name: "欢顔5",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      }, {
+        img: "avatar.png",
+        name: "欢顔5",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      }]
+    }, {
+      name: "全部",
+      expertList: [{
+        img: "avatar.png",
+        name: "欢顔6",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      }, {
+        img: "avatar.png",
+        name: "欢顔6",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      }]
+    }, {
+      name: "其他",
+      expertList: [{
+        img: "avatar.png",
+        name: "欢顔7",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      }, {
+        img: "avatar.png",
+        name: "欢顔7",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      }]
+    }
+  ],
+
+}
+
 module.exports = {
   logos: logos,
   dynamic_item_data: dynamic_item_data,
+  tab_data: tab_data
 }

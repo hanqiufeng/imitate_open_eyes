@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/welfares/welfare",
-    "pages/index/index",
     "pages/choices/choice",
+    "pages/index/index",
     "pages/classifys/classify",
+    "pages/welfares/welfare",
     "pages/circles/circle",
     "pages/mines/mine",
     "pages/logs/logs"

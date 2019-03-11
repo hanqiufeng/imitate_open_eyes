@@ -1,0 +1,26 @@
+<template name="tab-template">
+  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+    <block wx:for="{{listData}}" wx:key>
+      <view class="tab-item {{currentTab==index?'active':''}}" data-current="{{index}}" bindtap="swichNav">{{item.name}}</view>
+    </block>
+  </scroll-view>
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:90vh">
+    <swiper-item wx:for="{{listData}}" wx:key>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:for="{{listData[index].expertList}}" wx:key>
+          <view class="item-ans">
+            <view class="avatar">
+              <image class="img" src="/images/avatar/5.png"></image>
+            </view>
+            <view class="expertInfo">
+              <view class="name">{{item.name}}</view>
+              <view class="tag">{{item.tag}}</view>
+              <view class="answerHistory">{{item.answer}}个回答，{{item.listen}}人听过 </view>
+            </view>
+            <navigator url="/pages/askExpert/expertDetail" class="askBtn">问TA</navigator>
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</template>
