@@ -2,6 +2,7 @@
 <import src="../templates/more/more-template.wxml" />
 <import src="../templates/list/list-template.wxml" />
 <import src="../templates/tab/tab-template.wxml" />
+<import src="../templates/backtop/backtop-template.wxml" />
 
 <view class='choice_container'>
   <template is="swiper-template" data="{{...swipers}}" />
@@ -55,4 +56,6 @@
     <template is="tab-template" data="{{...tab_data}}" />
   </view>
 
+  <!-- <image src='../../images/icons/buttonTop.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image> -->
+  <template is="backtop-template" data="{{floorstatus}}"/>
 </view>

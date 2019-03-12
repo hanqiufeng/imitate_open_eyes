@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/choices/choice",
+    "pages/circles/circle",
     "pages/index/index",
+    "pages/choices/choice",
     "pages/classifys/classify",
     "pages/welfares/welfare",
-    "pages/circles/circle",
     "pages/mines/mine",
     "pages/logs/logs"
   ],

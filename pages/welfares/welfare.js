@@ -1,33 +1,30 @@
+var mockData = require("../../mockData/choice_data.js");
 var app = getApp();
+
 Page({
   data: {
-    winHeight: "",//窗口高度
-    currentTab: 0, //预设当前项的值
-    scrollLeft: 0, //tab标题的滚动条位置
-    expertList: [{ //假数据
-      img: "avatar.png",
-      name: "欢顔",
-      tag: "知名情感博主",
-      answer: 134,
-      listen: 2234
-    }]
+    tab_data: mockData.tab_data,
   },
+  
   // 滚动切换标签样式
   switchTab: function (e) {
-    console.log(e.detail.current)
+    console.log(`当前是第${e.detail.current}个标签页`);
+    console.log(this.data.tab_data.currentTab);
     this.setData({
-      currentTab: e.detail.current
+      'tab_data.currentTab': e.detail.current
     });
     this.checkCor();
   },
   // 点击标题切换当前页时改变样式
   swichNav: function (e) {
+    // console.log(e);
+    console.log(`你点击了第${e.currentTarget.dataset.current}个标签`);
     var cur = e.target.dataset.current;
-    console.log(`你点击了第${cur}个tab标签`)
-    if (this.data.currentTaB == cur) { return false; }
-    else {
+    if (this.data.tab_data.currentTaB == cur) {
+      return false;
+    } else {
       this.setData({
-        currentTab: cur
+        'tab_data.currentTab': cur
       })
     }
   },
@@ -43,21 +40,11 @@ Page({
       })
     }
   },
+
+  
   onLoad: function () {
-    var that = this;
-    //  高度自适应
-    wx.getSystemInfo({
-      success: function (res) {
-        var clientHeight = res.windowHeight,
-          clientWidth = res.windowWidth,
-          rpxR = 750 / clientWidth;
-        var calc = clientHeight * rpxR - 180;
-        console.log(calc)
-        that.setData({
-          winHeight: calc
-        });
-      }
-    });
+ 
   },
+
   footerTap: app.footerTap
 })

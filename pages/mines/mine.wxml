@@ -1,1 +1,27 @@
-<text>我的</text>
+<!--index.wxml-->
+<!-- <view class="container"> -->
+<view class="userinfo">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 请授权登录 </button>
+  <block wx:else>
+    <view class='mine-container'>
+      <view class='headImg'>
+        <view class='userIco'>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </view>
+      </view>
+
+      <block wx:for="{{user_info}}" wx:key>
+        <navigator url="/" class="navigator">
+          <view class="navigator-text">
+            <image src="{{item.icon}}" class='navigator-text-img' />
+            <text>{{item.pageName}}</text>
+          </view>
+          <view class="navigator-arrow"></view>
+        </navigator>
+      </block>
+
+    </view>
+  </block>
+</view>
+<!-- </view> -->

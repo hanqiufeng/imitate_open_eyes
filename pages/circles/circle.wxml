@@ -1,1 +1,29 @@
-<text>圈子</text>
+<view class='circle_container'>
+  <view class='list_items'>
+    <block>
+      <view class='list_item'>
+        <view class='item-introduce-img'>
+          <image src="/images/000.png"></image>
+        </view>
+        <view class='item-introduce-on'>
+          <text class='item-introduce-on-title'>#小仙女必Buy#</text>
+          <view class='item-introduce-on-title'>
+            <view>
+              <image class='introduce-img' src="/images/icons/eyes.png"></image>
+              <text>38445</text>
+            </view>
+            <view>
+              <image class='introduce-img' src="/images/icons/people.png"></image>
+              <text>892人参与</text>
+            </view>
+          </view>
+        </view>
+
+        <!-- <view class='item-footer'>
+          <text class='footer-left'>品牌活动</text>
+          <text class='footer-right'>奖品核对中</text>
+        </view> -->
+      </view>
+    </block>
+  </view>
+</view>

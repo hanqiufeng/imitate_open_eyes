@@ -1,0 +1,5 @@
+<template name="backtop-template">
+  <view>
+    <image src='/images/icons/buttonTop.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
+  </view>
+</template>

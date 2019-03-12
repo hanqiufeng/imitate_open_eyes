@@ -1,1 +1,94 @@
-/* pages/mines/mine.wxss */
+/**index.wxss**/
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 2px solid #f00; */
+  width: 100%;
+}
+
+.mine-container {
+  width: 100%;
+  /* border: 2px solid #000; */
+}
+
+.headImg {
+  width: 100%;
+  height: 400rpx;
+  background: url('http://img17.3lian.com/d/file/201701/20/2cb0ec229c96836a4f891b64f4451aea.jpg') 100% 100%;
+}
+.userIco{
+  position: absolute;
+  margin-top: 150rpx;
+  width: 200rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* border: 2px solid #000; */
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx auto;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  font-size: 30rpx;
+}
+
+
+.navigator {
+  padding: 20rpx 30rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.navigator:before {
+  content: " ";
+  position: absolute;
+  left: 30rpx;
+  top: 0;
+  right: 30rpx;
+  height: 1px;
+  border-top: 1rpx solid #D8D8D8;
+  color: #D8D8D8;
+}
+.navigator:first-child:before {
+  display: none;
+}
+.navigator-text {
+  flex: 1;
+}
+.navigator-text text{
+  font-size: 32rpx;
+  vertical-align:middle;
+}
+
+.navigator-text-img{
+  vertical-align:middle;
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+.navigator-arrow {
+  padding-right: 26rpx;
+  position: relative;
+}
+.navigator-arrow:after {
+  content: " ";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: #888888;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  right: 28rpx;
+}
