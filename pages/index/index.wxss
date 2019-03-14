@@ -19,3 +19,15 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.usermotto::after {
+  content: "";
+  display: block;
+  height: 52rpx;
+  width: 8rpx;
+  background: #4675f9;
+  position: absolute;
+  bottom: 0;
+  left: 5rpx;
+  border-radius: 16rpx;
+}
